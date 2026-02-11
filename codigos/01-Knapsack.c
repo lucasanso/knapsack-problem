@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAXN 100
-#define MAXW 1000
+#define MAXN 2000
+#define MAXW 10000
 
 int memo[MAXN][MAXW];
 

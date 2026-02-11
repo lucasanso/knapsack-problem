@@ -1,7 +1,7 @@
 import random
 import sys
 
-capacidade = 50
+capacidade = 5000
 n = int(sys.argv[1])
 
 pesos = [random.randint(1, 30) for _ in range(n)]
