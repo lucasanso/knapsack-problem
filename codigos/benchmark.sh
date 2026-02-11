@@ -1,13 +1,14 @@
 #!/bin/bash
 
 # Benchmark script for 01-Knapsack
-# Usage: bash benchmark.sh [output_file] [max_n]
+# Usage: bash benchmark.sh [output_file] [max_n] [weight]
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
 
 OUTPUT_FILE="${1:-resultados.csv}"
 MAX_N="${2:-50}"
+WEIGHT="${3:-100}"
 C_SOURCE="01-Knapsack.c"
 BINARY="knap.out"
 GENERATOR="geradorEntrada.py"
@@ -25,12 +26,12 @@ echo "Compilação OK."
 echo "n,time" > "$OUTPUT_FILE"
 
 echo ""
-echo "Iniciando benchmark para n = 1 até $MAX_N..."
+echo "Iniciando benchmark para n = 1 até $MAX_N com capacidade $WEIGHT..."
 echo ""
 
 for n in $(seq 1 $MAX_N); do
     # Generate random input
-    python3 "$GENERATOR" "$n" > /dev/null 2>&1
+    python3 "$GENERATOR" "$n" "$WEIGHT" > /dev/null 2>&1
 
     # Run the program and capture real elapsed time
     TIMEFORMAT='%3R'

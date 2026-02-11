@@ -68,3 +68,8 @@ int main(){
     int maior_valor_memo = mochila_memo(valores, pesos, n, CAPACIDADE, memo);
     printf("maior valor na mochila de capacidade %d e %d itens (memo): %d\n", CAPACIDADE, n, maior_valor_memo);
 }
+
+// para testar (valores bons)
+// (O(2^n)) naive (brute force): W = 100 N = 50
+
+// (O(n * W)) memo: W = 5000 N = 2000
