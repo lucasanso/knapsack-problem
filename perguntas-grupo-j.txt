@@ -1,0 +1,11 @@
+1. Qual o principal diferencial entre o algoritmo de força bruta e de memoização para resolver o Problema da Mochila?
+a) Otimização Combinatória
+b) Programação Dinâmica
+c) Recursão
+d) Ponteiros
+
+2. A complexidade de tempo e espaço do algoritmo de memoização?
+a) O(2^n) e O(n²)
+b) O(n) e O(1)
+c) O(n³) e O(n²)
+d) O(n x W) e O(n x W)
